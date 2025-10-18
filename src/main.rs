@@ -77,10 +77,15 @@ fn fac_while(n: u32) -> u32 {
 // Use a for loop to write a 'fac_for' function, which does the same thing as your 'fac_while' function
 fn fac_for(n: u32) -> u32 {
     let mut result = 1;
-    for m in 1..=n {
-        result = result * m;
+    if n == 0 {
+        return 1;
     }
-    return result;
+    else {
+        for m in 1..=n {
+             result = result * m;
+        }
+        return result;
+    }
 }
 
 /// Ex.3b(iii)
@@ -99,19 +104,28 @@ fn fac_rec(n: u32) -> u32 {
 // Solve this exercise by reading the Rust documentation:
 // https://doc.rust-lang.org/std/vec/struct.Vec.html
 fn vec_basics() -> Vec<i32> {
-    let arr: [i32; 5] = [1,2,3,4,5];
+    let _arr: [i32; 5] = [1,2,3,4,5];
 
     // Create a Vec with the same elements that are in 'arr' (there are multiple ways)
+    let mut vec1 = vec![1, 2, 3, 4, 5];
 
     // Add 6,7,8 to the end of v
+    vec1.push(6);
+    vec1.push(7);
+    vec1.push(8);
 
     // Remove the last number in v
+    vec1.pop();
 
     // Remove the number at index 3
+    vec1.remove(3);
 
     // Calculate the length of v and print it
+    let length = vec1.len();
+    println!("Die Länge beträgt: {length}");
 
     // Return v
+    return vec1;
 }
 
 
