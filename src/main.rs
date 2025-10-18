@@ -27,8 +27,15 @@ fn var_decl() {
 fn data_types() {
     // Replace ??? with fitting data types
     let a: i32 = 7;
-    let b: String::new() = "Hello World";
-    let c: Bool = true;
+    let b: &str = "Hello World";
+    let c: bool = true;
+
+    if c {
+        println!("{b}");
+    }
+    else {
+        println!("{a}");
+    }
 
     // Use if...else to print b if c is True or a if c is not True
 }
@@ -45,7 +52,8 @@ fn mutability() {
 
 /// Ex.3a
 // Add another parameter y of the correct type and the correct return type
-fn add(x: i32, ???) -> ??? {
+fn add(x: i32, y: i32) -> i32 {
+    return x + y;
     // Return the sum of x and y (you can do it two different ways, but one is more idiomatic!)
 }
 
