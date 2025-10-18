@@ -59,6 +59,15 @@ fn add(x: i32, y: i32) -> i32 {
 
 /// Ex.3b(i)
 // Define a function 'fac_while', to do the following:
+fn fac_while(n: u32) -> u32 {
+    let mut m = n;
+    let mut result = 1;
+    while m > 0 {
+        result = m * result;
+        m = m - 1;
+    }
+    return result;
+}
 // The function takes a natural number n as input and returns a natural number
 // Use a while loop to calculate the factorial of n
 // The factorial n! of n is defined like so:
@@ -66,9 +75,23 @@ fn add(x: i32, y: i32) -> i32 {
 
 /// Ex.3b(ii)
 // Use a for loop to write a 'fac_for' function, which does the same thing as your 'fac_while' function
+fn fac_for(n: u32) -> u32 {
+    let mut result = 1;
+    for m in 1..=n {
+        result = result * m;
+    }
+    return result;
+}
 
 /// Ex.3b(iii)
 // Use recursion to write a 'fac_rec' function, which does the same thing as your 'fac_while' function
+fn fac_rec(n: u32) -> u32 {
+    match n {
+        1 => return 1,
+        _ => return n * fac_rec(n-1),
+    }
+
+}
 // Try to use the match construct instead of if...else:
 // https://rust-book.cs.brown.edu/ch06-02-match.html
 
