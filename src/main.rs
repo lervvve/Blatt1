@@ -140,7 +140,9 @@ fn vec_basics() -> Vec<i32> {
 //    - observe the output
 fn main() {
     println!("Hello Rust SEP!");
-    var_decl();
+    let a = fac_for(2);
+    let b = fac_for(0);
+    println!("a: {a}\nb: {b}");
 }
 
 // You can add more tests below here, which you can then execute with 'cargo test'
