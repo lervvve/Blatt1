@@ -19,16 +19,16 @@
 /// Ex.2i
 fn var_decl() {
     // Add the missing keyword
-    x = 5;
+    let x = 5;
     println!("x = {x}");
 }
 
 /// Ex.2ii
 fn data_types() {
     // Replace ??? with fitting data types
-    let a: ??? = 7;
-    let b: ??? = "Hello World";
-    let c: ??? = true;
+    let a: i32 = 7;
+    let b: String::new() = "Hello World";
+    let c: Bool = true;
 
     // Use if...else to print b if c is True or a if c is not True
 }
@@ -36,7 +36,7 @@ fn data_types() {
 /// Ex.2iii
 fn mutability() {
     // Add the missing keyword
-    let x = 5;
+    let mut x = 5;
     println!("{x}");
 
     x = 3; // Don't change this line!
@@ -95,6 +95,7 @@ fn vec_basics() -> Vec<i32> {
 //    - observe the output
 fn main() {
     println!("Hello Rust SEP!");
+    var_decl();
 }
 
 // You can add more tests below here, which you can then execute with 'cargo test'
